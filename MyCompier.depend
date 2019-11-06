@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1567503553 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\asm.cpp
+	"global.h"
+	<map>
+
+1560225896 c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\global.h
+	<fstream>
+	<iostream>
+	<string>
+	<cstring>
+	<queue>
+	<iomanip>
+	<map>
+
+1557748115 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\error.cpp
+	"global.h"
+
+1567501748 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\lexical_analysis.cpp
+	"global.h"
+
+1557147084 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\main.cpp
+	"global.h"
+
+1567502999 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\midcode.cpp
+	"global.h"
+
+1560222485 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\optimize.cpp
+	"global.h"
+	<cmath>
+	<algorithm>
+
+1567502542 source:c:\users\宋金鹏\desktop\文件\compier\mycompier\mycompier\syntax_analysis.cpp
+	"global.h"
+	<map>
+	<stack>
+

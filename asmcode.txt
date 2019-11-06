@@ -1,0 +1,457 @@
+.data:			
+const1:	.word	0	
+const2:	.word	0	
+const3:	.word	0	
+const4:	.word	0	
+var1:	.word	0	
+var2:	.word	0	
+var3:	.word	0	
+var4:	.word	0	
+_String_3:	.ascii	"Input the base:\0"	
+_String_5:	.ascii	"Input the number:\0"	
+_String_4:	.ascii	"Input the step:\0"	
+_String_2:	.ascii	"\n\0"	
+_String_7:	.ascii	"\nInput the choice: 1 2 3 , 0 for return \n\0"	
+_String_10:	.ascii	"best\n\0"	
+_String_9:	.ascii	"better\n\0"	
+_String_8:	.ascii	"good\n\0"	
+_String_0:	.ascii	"input there number\0"	
+_String_1:	.ascii	"the max number:\0"	
+_String_6:	.ascii	"the result:\0"	
+.text:			
+
+#< const   , int     ,         , const1   >
+
+#< =       , 1       ,         , const1   >
+		li	$t1	1	
+		la	$t0	const1	
+		sw	$t1	0($t0)	
+
+#< const   , int     ,         , const2   >
+
+#< -       , 0       , 100     , const2   >
+		li	$t1	0	
+		li	$t2	100	
+		sub	$t1	$t1	$t2
+		la	$t0	const2	
+		sw	$t1	0($t0)	
+
+#< const   , int     ,         , const3   >
+
+#< =       , 100     ,         , const3   >
+		li	$t1	100	
+		la	$t0	const3	
+		sw	$t1	0($t0)	
+
+#< const   , char    ,         , const4   >
+
+#< =       , 43      ,         , const4   >
+		li	$t1	43	
+		la	$t0	const4	
+		sw	$t1	0($t0)	
+
+#< int     ,         ,         , var1     >
+
+#< int     ,         ,         , var2     >
+
+#< int     ,         ,         , var3     >
+
+#< int     ,         ,         , var4     >
+
+		j	main		
+#< para    , int     ,         , var1     >
+
+#< para    , int     ,         , var2     >
+
+#< para    , int     ,         , var3     >
+
+#< func    , int     ,         , max      >
+max:			
+
+#< int     ,         ,         , integer  >
+		subi	$sp	$sp	4
+
+#< char    ,         ,         , ch       >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , dell     >
+		subi	$sp	$sp	4
+
+#< =       , 1       ,         , integer  >
+		li	$t1	1	
+		sw	$t1	-4($fp)	
+
+#< <       , var1    , var2    , _Label_0 >
+		lw	$t8	8($fp)	
+		lw	$t9	12($fp)	
+		blt	$t8	$t9	_Label_0
+
+#< <       , var1    , var3    , _Label_2 >
+		lw	$t8	8($fp)	
+		lw	$t9	16($fp)	
+		blt	$t8	$t9	_Label_2
+
+#< =       , var1    ,         , dell     >
+		lw	$t1	8($fp)	
+		sw	$t1	-12($fp)	
+
+#< jmp     ,         ,         , _Label_3 >
+		j	_Label_3		
+
+#< lab     ,         ,         , _Label_2 >
+_Label_2:			
+
+#< =       , var3    ,         , dell     >
+		lw	$t1	16($fp)	
+		sw	$t1	-12($fp)	
+
+#< lab     ,         ,         , _Label_3 >
+_Label_3:			
+
+#< jmp     ,         ,         , _Label_1 >
+		j	_Label_1		
+
+#< lab     ,         ,         , _Label_0 >
+_Label_0:			
+
+#< <       , var2    , var3    , _Label_4 >
+		lw	$t8	12($fp)	
+		lw	$t9	16($fp)	
+		blt	$t8	$t9	_Label_4
+
+#< =       , var2    ,         , dell     >
+		lw	$t1	12($fp)	
+		sw	$t1	-12($fp)	
+
+#< jmp     ,         ,         , _Label_5 >
+		j	_Label_5		
+
+#< lab     ,         ,         , _Label_4 >
+_Label_4:			
+
+#< =       , var3    ,         , dell     >
+		lw	$t1	16($fp)	
+		sw	$t1	-12($fp)	
+
+#< lab     ,         ,         , _Label_5 >
+_Label_5:			
+
+#< lab     ,         ,         , _Label_1 >
+_Label_1:			
+
+#< ret     ,         ,         , dell     >
+		lw	$t1	-12($fp)	
+		move	$v0	$t1	
+		jr	$ra		
+
+#< exit    ,         ,         , max      >
+
+#< para    , int     ,         , base     >
+
+#< para    , int     ,         , step     >
+
+#< para    , int     ,         , n        >
+
+#< func    , int     ,         , add1     >
+add1:			
+
+#< lab     ,         ,         , _Label_7 >
+_Label_7:			
+
+#< <=      , n       , 0       , _Label_6 >
+		lw	$t8	16($fp)	
+		li	$t9	0	
+		ble	$t8	$t9	_Label_6
+
+#< int     ,         ,         , _Var_0   >
+		subi	$sp	$sp	4
+
+#< +       , base    , step    , _Var_0   >
+		lw	$t1	8($fp)	
+		lw	$t2	12($fp)	
+		add	$t1	$t1	$t2
+		sw	$t1	-16($fp)	
+
+#< =       , _Var_0  ,         , base     >
+		lw	$t1	-16($fp)	
+		sw	$t1	8($fp)	
+
+#< int     ,         ,         , _Var_1   >
+		subi	$sp	$sp	4
+
+#< -       , n       , 1       , _Var_1   >
+		lw	$t1	16($fp)	
+		li	$t2	1	
+		sub	$t1	$t1	$t2
+		sw	$t1	-20($fp)	
+
+#< =       , _Var_1  ,         , n        >
+		lw	$t1	-20($fp)	
+		sw	$t1	16($fp)	
+
+#< jmp     ,         ,         , _Label_7 >
+		j	_Label_7		
+
+#< lab     ,         ,         , _Label_6 >
+_Label_6:			
+
+#< ret     ,         ,         , base     >
+		lw	$t1	8($fp)	
+		move	$v0	$t1	
+		jr	$ra		
+
+#< exit    ,         ,         , add1     >
+
+#< func    ,         ,         , main     >
+main:			
+
+#< int     ,         ,         , cast1    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , cast2    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , cast3    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , cast4    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , cast5    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , cast6    >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , rel      >
+		subi	$sp	$sp	4
+
+#< int     ,         ,         , choice   >
+		subi	$sp	$sp	4
+
+#< =       , const3  ,         , var3     >
+		la	$t0	const3	
+		lw	$t1	0($t0)	
+		la	$t0	var3	
+		sw	$t1	0($t0)	
+
+#< =       , const4  ,         , var4     >
+		la	$t0	const4	
+		lw	$t1	0($t0)	
+		la	$t0	var4	
+		sw	$t1	0($t0)	
+
+#< prtf    , "input there number",         ,          >
+		la	$a0	_String_0	
+		li	$v0	4	
+		syscall			
+
+#< scf     ,         ,         , cast1    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-24($fp)	
+
+#< scf     ,         ,         , cast2    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-28($fp)	
+
+#< scf     ,         ,         , cast3    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-32($fp)	
+
+#< int     ,         ,         , _Var_2   >
+		subi	$sp	$sp	4
+
+#< callpara,         ,         , cast3    >
+		lw	$t1	-32($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< callpara,         ,         , cast2    >
+		lw	$t1	-28($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< callpara,         ,         , cast1    >
+		lw	$t1	-24($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< call    , max     ,         , _Var_2   >
+		subi	$sp	$sp	4
+		sw	$ra	0($sp)	
+		subi	$sp	$sp	4
+		sw	$fp	0($sp)	
+		move	$fp	$sp	
+		jal	max		
+		nop			
+		move	$sp	$fp	
+		lw	$ra	4($fp)	
+		lw	$fp	0($fp)	
+		sw	$v0	-56($fp)	
+
+#< =       , _Var_2  ,         , var1     >
+		lw	$t1	-56($fp)	
+		la	$t0	var1	
+		sw	$t1	0($t0)	
+
+#< prtf    , "the max number:", var1    ,          >
+		la	$a0	_String_1	
+		li	$v0	4	
+		syscall			
+		la	$t0	var1	
+		lw	$a0	0($t0)	
+		li	$v0	1	
+		syscall			
+
+#< prtf    , "\n"    ,         ,          >
+		la	$a0	_String_2	
+		li	$v0	4	
+		syscall			
+
+#< prtf    , "Input the base:",         ,          >
+		la	$a0	_String_3	
+		li	$v0	4	
+		syscall			
+
+#< scf     ,         ,         , cast4    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-36($fp)	
+
+#< prtf    , "Input the step:",         ,          >
+		la	$a0	_String_4	
+		li	$v0	4	
+		syscall			
+
+#< scf     ,         ,         , cast5    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-40($fp)	
+
+#< prtf    , "Input the number:",         ,          >
+		la	$a0	_String_5	
+		li	$v0	4	
+		syscall			
+
+#< scf     ,         ,         , cast6    >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-44($fp)	
+
+#< int     ,         ,         , _Var_3   >
+		subi	$sp	$sp	4
+
+#< callpara,         ,         , cast6    >
+		lw	$t1	-44($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< callpara,         ,         , cast5    >
+		lw	$t1	-40($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< callpara,         ,         , cast4    >
+		lw	$t1	-36($fp)	
+		subi	$sp	$sp	4
+		sw	$t1	0($sp)	
+
+#< call    , add1    ,         , _Var_3   >
+		subi	$sp	$sp	4
+		sw	$ra	0($sp)	
+		subi	$sp	$sp	4
+		sw	$fp	0($sp)	
+		move	$fp	$sp	
+		jal	add1		
+		nop			
+		move	$sp	$fp	
+		lw	$ra	4($fp)	
+		lw	$fp	0($fp)	
+		sw	$v0	-60($fp)	
+
+#< =       , _Var_3  ,         , rel      >
+		lw	$t1	-60($fp)	
+		sw	$t1	-48($fp)	
+
+#< prtf    , "the result:",         ,          >
+		la	$a0	_String_6	
+		li	$v0	4	
+		syscall			
+
+#< prtf    ,         , rel     ,          >
+		lw	$a0	-48($fp)	
+		li	$v0	1	
+		syscall			
+
+#< prtf    , "\nInput the choice: 1 2 3 , 0 for return \n",         ,          >
+		la	$a0	_String_7	
+		li	$v0	4	
+		syscall			
+
+#< scf     ,         ,         , choice   >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-52($fp)	
+
+#< lab     ,         ,         , _Label_9 >
+_Label_9:			
+
+#< ==      , choice  , 0       , _Label_8 >
+		lw	$t8	-52($fp)	
+		li	$t9	0	
+		beq	$t8	$t9	_Label_8
+
+#< !=      , 1       , choice  , _Label_10 >
+		li	$t8	1	
+		lw	$t9	-52($fp)	
+		bne	$t8	$t9	_Label_10
+
+#< prtf    , "good\n",         ,          >
+		la	$a0	_String_8	
+		li	$v0	4	
+		syscall			
+
+#< lab     ,         ,         , _Label_10 >
+_Label_10:			
+
+#< !=      , 2       , choice  , _Label_11 >
+		li	$t8	2	
+		lw	$t9	-52($fp)	
+		bne	$t8	$t9	_Label_11
+
+#< prtf    , "better\n",         ,          >
+		la	$a0	_String_9	
+		li	$v0	4	
+		syscall			
+
+#< lab     ,         ,         , _Label_11 >
+_Label_11:			
+
+#< !=      , 3       , choice  , _Label_12 >
+		li	$t8	3	
+		lw	$t9	-52($fp)	
+		bne	$t8	$t9	_Label_12
+
+#< prtf    , "best\n",         ,          >
+		la	$a0	_String_10	
+		li	$v0	4	
+		syscall			
+
+#< lab     ,         ,         , _Label_12 >
+_Label_12:			
+
+#< scf     ,         ,         , choice   >
+		li	$v0	5	
+		syscall			
+		sw	$v0	-52($fp)	
+
+#< jmp     ,         ,         , _Label_9 >
+		j	_Label_9		
+
+#< lab     ,         ,         , _Label_8 >
+_Label_8:			
+
+#< exit    ,         ,         , main     >

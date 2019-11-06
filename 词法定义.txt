@@ -1,0 +1,47 @@
+#define INT_SYM 1 // int
+#define CHAR_SYM 2 // char
+#define FLOAT_SYM 3 // float
+#define DOUBLE_SYM 4 // double
+#define BOOL_SYM 5 // bool
+#define VOID_SYM 6 // void
+#define CONST_SYM 7 // const
+#define IF_SYM 8 // if
+#define ELSE_SYM 9 // else
+#define FOR_SYM 10 // for
+#define WHILE_SYM 11 // while
+#define DO_SYM 12 // do
+#define PRINTF_SYM 13 // print
+#define SCANF_SYM 14 // scanf
+#define RETURN_SYM 15 // return
+#define MAIN_SYM 16 // main
+#define IDENTIFIER_SYM 17 // indentifier
+#define ADD_SYM 18 // +
+#define SUBTRACT_SYM 19 // -
+#define MULTIPLY_SYM 20 // *
+#define DIVIDE_SYM 21 // /
+#define LESS_SYM 22 // <
+#define GREATER_SYM 23 // >
+#define LESSEQUAL_SYM 24 // <=
+#define GREATEREQUAL_SYM 25 // >=
+#define EQUAL_SYM 26 // ==
+#define NOTEQUAL_SYM 27 // !=
+#define ASSIGN_SYM 28 // =
+#define COMMA_SYM 29 // ,
+#define SEMICOLON_SYM 30 // ;
+#define COLON_SYM 31 // :
+#define SINGALQUOTATION_SYM 32 // '
+#define DOUBLEQUOTATION_SYM 33 // "
+#define LEFTSMALLBRACKET_SYM 34 // (
+#define RIGHTSMALLBRACKET_SYM 35 // )
+#define LEFTMIDDLEBRACKET_SYM 36 // [
+#define RIGHTMIDDLEBRACKET_SYM 37 // ]
+#define LEFTBIGBRACKET_SYM 38 // {
+#define RIGHTBIGBRACKET_SYM 39 // }
+#define NUMBER_SYM 40 // number
+#define STRING_SYM 41 // string
+#define CHARACTER_SYM 42 // character
+
+
+#define ERROR 0 // error
+
+& | && || #define #include

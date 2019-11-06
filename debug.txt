@@ -1,0 +1,1279 @@
+CONST_SYMID              7         const
+*in program_lex
+*in constDeclaration_lex
+INT_SYMID                1         int
+*in constDefinition_lex
+IDENTIFIER_SYMID         20        const1
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+< const   , int     ,         , const1   >
+NUMBER_SYMID             45        1
+< =       , 1       ,         , const1   >
+COMMA_SYMID              33        ,
+IDENTIFIER_SYMID         20        const2
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+< const   , int     ,         , const2   >
+SUBTRACT_SYMID           22        -
+NUMBER_SYMID             45        100
+< -       , 0       , 100     , const2   >
+SEMICOLON_SYMID          34        ;
+*out constDefinition_lex
+CONST_SYMID              7         const
+INT_SYMID                1         int
+*in constDefinition_lex
+IDENTIFIER_SYMID         20        const3
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+< const   , int     ,         , const3   >
+NUMBER_SYMID             45        100
+< =       , 100     ,         , const3   >
+SEMICOLON_SYMID          34        ;
+*out constDefinition_lex
+CONST_SYMID              7         const
+CHAR_SYMID               2         char
+*in constDefinition_lex
+IDENTIFIER_SYMID         20        const4
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+< const   , char    ,         , const4   >
+NUMBER_SYMID             45        43
+< =       , 43      ,         , const4   >
+SEMICOLON_SYMID          34        ;
+*out constDefinition_lex
+INT_SYMID                1         int
+*out constDeclaration_lex
+***[readAhead]***   IDENTIFIER_SYMID         20        var1
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDeclaration_lex
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var1
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , var1     >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        var2
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var2
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , var2     >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        var3
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var3
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , var3     >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        var4
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var4
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , var4     >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        max
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+*out varDeclaration_lex
+***[readAhead]***   IDENTIFIER_SYMID         20        max
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+*in funWithReturnDefinition_lex
+*in headDeclaration_lex
+IDENTIFIER_SYMID         20        max
+*in identifier_lex
+LEFTSMALLBRACKET_SYMID   39        (
+*out identifier_lex
+*out headDeclaration_lex
+INT_SYMID                1         int
+*in parameter_lex
+*in parameterTable_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var1
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< para    , int     ,         , var1     >
+INT_SYMID                1         int
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var2
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< para    , int     ,         , var2     >
+INT_SYMID                1         int
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        var3
+*out typeIdentifier_lex
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< para    , int     ,         , var3     >
+*out parameterTable_lex
+*out parameter_lex
+< func    , int     ,         , max      >
+LEFTBIGBRACKET_SYMID     43        {
+INT_SYMID                1         int
+*in compound_lex
+*in varDeclaration_lex
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        integer
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , integer  >
+*out varDefinition_lex
+CHAR_SYMID               2         char
+***[readAhead]***   IDENTIFIER_SYMID         20        ch
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        ch
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< char    ,         ,         , ch       >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        dell
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        dell
+*out typeIdentifier_lex
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , dell     >
+*out varDefinition_lex
+IDENTIFIER_SYMID         20        integer
+*out varDeclaration_lex
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+NUMBER_SYMID             45        1
+*in expression_lex
+*in term_lex
+*in factor_lex
+*in int_lex
+*in unsignedInt_lex
+SEMICOLON_SYMID          34        ;
+*out unsignedInt_lex
+*out int_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , 1       ,         , integer  >
+*out assignSentence_lex
+IF_SYMID                 8         if
+*out sentence_lex
+*in sentence_lex
+*in conditionSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        var1
+*in condition_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   GREATEREQUAL_SYMID       29        >=
+***[rollBack]***
+*in identifier_lex
+GREATEREQUAL_SYMID       29        >=
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*in relation_lex
+IDENTIFIER_SYMID         20        var2
+*out relation_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*out condition_lex
+< <       , var1    , var2    , _Label_0 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IF_SYMID                 8         if
+*in sentenceColumn_lex
+*in sentence_lex
+*in conditionSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        var1
+*in condition_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   GREATEREQUAL_SYMID       29        >=
+***[rollBack]***
+*in identifier_lex
+GREATEREQUAL_SYMID       29        >=
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*in relation_lex
+IDENTIFIER_SYMID         20        var3
+*out relation_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*out condition_lex
+< <       , var1    , var3    , _Label_2 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IDENTIFIER_SYMID         20        dell
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        var1
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , var1    ,         , dell     >
+*out assignSentence_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+ELSE_SYMID               9         else
+*out sentence_lex
+< jmp     ,         ,         , _Label_3 >
+< lab     ,         ,         , _Label_2 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IDENTIFIER_SYMID         20        dell
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        var3
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , var3    ,         , dell     >
+*out assignSentence_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+< lab     ,         ,         , _Label_3 >
+*out conditionSentence_lex
+*out sentence_lex
+*out sentenceColumn_lex
+ELSE_SYMID               9         else
+*out sentence_lex
+< jmp     ,         ,         , _Label_1 >
+< lab     ,         ,         , _Label_0 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IF_SYMID                 8         if
+*in sentenceColumn_lex
+*in sentence_lex
+*in conditionSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        var2
+*in condition_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   GREATEREQUAL_SYMID       29        >=
+***[rollBack]***
+*in identifier_lex
+GREATEREQUAL_SYMID       29        >=
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*in relation_lex
+IDENTIFIER_SYMID         20        var3
+*out relation_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*out condition_lex
+< <       , var2    , var3    , _Label_4 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IDENTIFIER_SYMID         20        dell
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        var2
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , var2    ,         , dell     >
+*out assignSentence_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+ELSE_SYMID               9         else
+*out sentence_lex
+< jmp     ,         ,         , _Label_5 >
+< lab     ,         ,         , _Label_4 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IDENTIFIER_SYMID         20        dell
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        var3
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , var3    ,         , dell     >
+*out assignSentence_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+< lab     ,         ,         , _Label_5 >
+*out conditionSentence_lex
+*out sentence_lex
+*out sentenceColumn_lex
+RETURN_SYMID             18        return
+*out sentence_lex
+< lab     ,         ,         , _Label_1 >
+*out conditionSentence_lex
+*out sentence_lex
+*in sentence_lex
+*in return_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        dell
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+SEMICOLON_SYMID          34        ;
+< ret     ,         ,         , dell     >
+*out return_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+*out compound_lex
+INT_SYMID                1         int
+< exit    ,         ,         , max      >
+*out funWithReturnDefinition_lex
+***[readAhead]***   IDENTIFIER_SYMID         20        add1
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+*in funWithReturnDefinition_lex
+*in headDeclaration_lex
+IDENTIFIER_SYMID         20        add1
+*in identifier_lex
+LEFTSMALLBRACKET_SYMID   39        (
+*out identifier_lex
+*out headDeclaration_lex
+INT_SYMID                1         int
+*in parameter_lex
+*in parameterTable_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        base
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< para    , int     ,         , base     >
+INT_SYMID                1         int
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        step
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< para    , int     ,         , step     >
+INT_SYMID                1         int
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        n
+*out typeIdentifier_lex
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< para    , int     ,         , n        >
+*out parameterTable_lex
+*out parameter_lex
+< func    , int     ,         , add1     >
+LEFTBIGBRACKET_SYMID     43        {
+WHILE_SYMID              11        while
+*in compound_lex
+*in sentenceColumn_lex
+*in sentence_lex
+*in loopSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+< lab     ,         ,         , _Label_7 >
+IDENTIFIER_SYMID         20        n
+*in condition_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   GREATER_SYMID            27        >
+***[rollBack]***
+*in identifier_lex
+GREATER_SYMID            27        >
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*in relation_lex
+NUMBER_SYMID             45        0
+*out relation_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+*in int_lex
+*in unsignedInt_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out unsignedInt_lex
+*out int_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*out condition_lex
+< <=      , n       , 0       , _Label_6 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+IDENTIFIER_SYMID         20        base
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        base
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   ADD_SYMID                21        +
+***[rollBack]***
+*in identifier_lex
+ADD_SYMID                21        +
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*in add_lex
+IDENTIFIER_SYMID         20        step
+*out add_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+< int     ,         ,         , _Var_0   >
+< +       , base    , step    , _Var_0   >
+*out expression_lex
+< =       , _Var_0  ,         , base     >
+*out assignSentence_lex
+IDENTIFIER_SYMID         20        n
+*out sentence_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        n
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SUBTRACT_SYMID           22        -
+***[rollBack]***
+*in identifier_lex
+SUBTRACT_SYMID           22        -
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*in add_lex
+NUMBER_SYMID             45        1
+*out add_lex
+*in term_lex
+*in factor_lex
+*in int_lex
+*in unsignedInt_lex
+SEMICOLON_SYMID          34        ;
+*out unsignedInt_lex
+*out int_lex
+*out factor_lex
+*out term_lex
+< int     ,         ,         , _Var_1   >
+< -       , n       , 1       , _Var_1   >
+*out expression_lex
+< =       , _Var_1  ,         , n        >
+*out assignSentence_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+RETURN_SYMID             18        return
+*out sentence_lex
+< jmp     ,         ,         , _Label_7 >
+< lab     ,         ,         , _Label_6 >
+*out loopSentence_lex
+*out sentence_lex
+*in sentence_lex
+*in return_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        base
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+SEMICOLON_SYMID          34        ;
+< ret     ,         ,         , base     >
+*out return_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+*out compound_lex
+VOID_SYMID               6         void
+< exit    ,         ,         , add1     >
+*out funWithReturnDefinition_lex
+***[readAhead]***   MAIN_SYMID               19        main
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+***[readAhead]***   MAIN_SYMID               19        main
+***[rollBack]***
+*in mainFun_lex
+MAIN_SYMID               19        main
+< func    ,         ,         , main     >
+LEFTSMALLBRACKET_SYMID   39        (
+RIGHTSMALLBRACKET_SYMID  40        )
+LEFTBIGBRACKET_SYMID     43        {
+INT_SYMID                1         int
+*in compound_lex
+*in varDeclaration_lex
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        cast1
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< int     ,         ,         , cast1    >
+IDENTIFIER_SYMID         20        cast2
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< int     ,         ,         , cast2    >
+IDENTIFIER_SYMID         20        cast3
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , cast3    >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        cast4
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        cast4
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< int     ,         ,         , cast4    >
+IDENTIFIER_SYMID         20        cast5
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< int     ,         ,         , cast5    >
+IDENTIFIER_SYMID         20        cast6
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , cast6    >
+*out varDefinition_lex
+INT_SYMID                1         int
+***[readAhead]***   IDENTIFIER_SYMID         20        rel
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in varDefinition_lex
+*in typeIdentifier_lex
+IDENTIFIER_SYMID         20        rel
+*out typeIdentifier_lex
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< int     ,         ,         , rel      >
+IDENTIFIER_SYMID         20        choice
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+< int     ,         ,         , choice   >
+*out varDefinition_lex
+IDENTIFIER_SYMID         20        var3
+*out varDeclaration_lex
+*in sentenceColumn_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        const3
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , const3  ,         , var3     >
+*out assignSentence_lex
+IDENTIFIER_SYMID         20        var4
+*out sentence_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        const4
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   SEMICOLON_SYMID          34        ;
+***[rollBack]***
+*in identifier_lex
+SEMICOLON_SYMID          34        ;
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , const4  ,         , var4     >
+*out assignSentence_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "input there number"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "input there number",         ,          >
+*out printf_lex
+SCANF_SYMID              17        scanf
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast1
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< scf     ,         ,         , cast1    >
+IDENTIFIER_SYMID         20        cast2
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+< scf     ,         ,         , cast2    >
+IDENTIFIER_SYMID         20        cast3
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , cast3    >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+IDENTIFIER_SYMID         20        var1
+*out sentence_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        max
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+*in funWithReturnCall_lex
+< int     ,         ,         , _Var_2   >
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast1
+*in valueParameterTable_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+IDENTIFIER_SYMID         20        cast2
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+IDENTIFIER_SYMID         20        cast3
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< callpara,         ,         , cast3    >
+< callpara,         ,         , cast2    >
+< callpara,         ,         , cast1    >
+*out valueParameterTable_lex
+SEMICOLON_SYMID          34        ;
+< call    , max     ,         , _Var_2   >
+*out funWithReturnCall_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , _Var_2  ,         , var1     >
+*out assignSentence_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "the max number:"
+*in string_lex
+COMMA_SYMID              33        ,
+*out string_lex
+IDENTIFIER_SYMID         20        var1
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "the max number:", var1    ,          >
+*out printf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "\n"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "\n"    ,         ,          >
+*out printf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "Input the base:"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "Input the base:",         ,          >
+*out printf_lex
+SCANF_SYMID              17        scanf
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast4
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , cast4    >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "Input the step:"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "Input the step:",         ,          >
+*out printf_lex
+SCANF_SYMID              17        scanf
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast5
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , cast5    >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "Input the number:"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "Input the number:",         ,          >
+*out printf_lex
+SCANF_SYMID              17        scanf
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast6
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , cast6    >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+IDENTIFIER_SYMID         20        rel
+*out sentence_lex
+*in sentence_lex
+***[readAhead]***   ASSIGN_SYMID             32        =
+***[rollBack]***
+*in assignSentence_lex
+*in identifier_lex
+ASSIGN_SYMID             32        =
+*out identifier_lex
+IDENTIFIER_SYMID         20        add1
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   LEFTSMALLBRACKET_SYMID   39        (
+***[rollBack]***
+*in funWithReturnCall_lex
+< int     ,         ,         , _Var_3   >
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        cast4
+*in valueParameterTable_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+IDENTIFIER_SYMID         20        cast5
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   COMMA_SYMID              33        ,
+***[rollBack]***
+*in identifier_lex
+COMMA_SYMID              33        ,
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+IDENTIFIER_SYMID         20        cast6
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< callpara,         ,         , cast6    >
+< callpara,         ,         , cast5    >
+< callpara,         ,         , cast4    >
+*out valueParameterTable_lex
+SEMICOLON_SYMID          34        ;
+< call    , add1    ,         , _Var_3   >
+*out funWithReturnCall_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+< =       , _Var_3  ,         , rel      >
+*out assignSentence_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "the result:"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "the result:",         ,          >
+*out printf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        rel
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+SEMICOLON_SYMID          34        ;
+< prtf    ,         , rel     ,          >
+*out printf_lex
+PRINTF_SYMID             16        printf
+*out sentence_lex
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "\nInput the choice: 1 2 3 , 0 for return \n"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "\nInput the choice: 1 2 3 , 0 for return \n",         ,          >
+*out printf_lex
+SCANF_SYMID              17        scanf
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        choice
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , choice   >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+WHILE_SYMID              11        while
+*out sentence_lex
+*in sentence_lex
+*in loopSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+< lab     ,         ,         , _Label_9 >
+IDENTIFIER_SYMID         20        choice
+*in condition_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   NOTEQUAL_SYMID           31        !=
+***[rollBack]***
+*in identifier_lex
+NOTEQUAL_SYMID           31        !=
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*in relation_lex
+NUMBER_SYMID             45        0
+*out relation_lex
+*in expression_lex
+*in term_lex
+*in factor_lex
+*in int_lex
+*in unsignedInt_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out unsignedInt_lex
+*out int_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+*out condition_lex
+< ==      , choice  , 0       , _Label_8 >
+LEFTBIGBRACKET_SYMID     43        {
+*in sentence_lex
+SWITCH_SYMID             13        switch
+*in sentenceColumn_lex
+*in sentence_lex
+*in situationSentence_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        choice
+*in expression_lex
+*in term_lex
+*in factor_lex
+***[readAhead]***   RIGHTSMALLBRACKET_SYMID  40        )
+***[rollBack]***
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+*out factor_lex
+*out term_lex
+*out expression_lex
+LEFTBIGBRACKET_SYMID     43        {
+CASE_SYMID               14        case
+*in situationTable_lex
+*in situationSubSentence_lex
+NUMBER_SYMID             45        1
+< !=      , 1       , choice  , _Label_10 >
+*in enumerableConst_lex
+*in int_lex
+*in unsignedInt_lex
+COLON_SYMID              35        :
+*out unsignedInt_lex
+*out int_lex
+*out enumerableConst_lex
+PRINTF_SYMID             16        printf
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "good\n"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "good\n",         ,          >
+*out printf_lex
+CASE_SYMID               14        case
+*out sentence_lex
+< lab     ,         ,         , _Label_10 >
+*out situationSubSentence_lex
+*in situationSubSentence_lex
+NUMBER_SYMID             45        2
+< !=      , 2       , choice  , _Label_11 >
+*in enumerableConst_lex
+*in int_lex
+*in unsignedInt_lex
+COLON_SYMID              35        :
+*out unsignedInt_lex
+*out int_lex
+*out enumerableConst_lex
+PRINTF_SYMID             16        printf
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "better\n"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "better\n",         ,          >
+*out printf_lex
+CASE_SYMID               14        case
+*out sentence_lex
+< lab     ,         ,         , _Label_11 >
+*out situationSubSentence_lex
+*in situationSubSentence_lex
+NUMBER_SYMID             45        3
+< !=      , 3       , choice  , _Label_12 >
+*in enumerableConst_lex
+*in int_lex
+*in unsignedInt_lex
+COLON_SYMID              35        :
+*out unsignedInt_lex
+*out int_lex
+*out enumerableConst_lex
+PRINTF_SYMID             16        printf
+*in sentence_lex
+*in printf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+STRING_SYMID             46        "best\n"
+*in string_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out string_lex
+SEMICOLON_SYMID          34        ;
+< prtf    , "best\n",         ,          >
+*out printf_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+< lab     ,         ,         , _Label_12 >
+*out situationSubSentence_lex
+*out situationTable_lex
+SCANF_SYMID              17        scanf
+*out situationSentence_lex
+*out sentence_lex
+*in sentence_lex
+*in scanf_lex
+LEFTSMALLBRACKET_SYMID   39        (
+IDENTIFIER_SYMID         20        choice
+*in identifier_lex
+RIGHTSMALLBRACKET_SYMID  40        )
+*out identifier_lex
+< scf     ,         ,         , choice   >
+SEMICOLON_SYMID          34        ;
+*out scanf_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+*out sentenceColumn_lex
+RIGHTBIGBRACKET_SYMID    44        }
+*out sentence_lex
+< jmp     ,         ,         , _Label_9 >
+< lab     ,         ,         , _Label_8 >
+*out loopSentence_lex
+*out sentence_lex
+*out sentenceColumn_lex
+*out compound_lex
+< exit    ,         ,         , main     >
+*out mainFun_lex
+*out program_lex

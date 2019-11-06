@@ -1,0 +1,108 @@
+< const   , int     ,         , const1   >
+< =       , 1       ,         , const1   >
+< const   , int     ,         , const2   >
+< -       , 0       , 100     , const2   >
+< const   , int     ,         , const3   >
+< =       , 100     ,         , const3   >
+< const   , char    ,         , const4   >
+< =       , 43      ,         , const4   >
+< int     ,         ,         , var1     >
+< int     ,         ,         , var2     >
+< int     ,         ,         , var3     >
+< int     ,         ,         , var4     >
+< para    , int     ,         , var1     >
+< para    , int     ,         , var2     >
+< para    , int     ,         , var3     >
+< func    , int     ,         , max      >
+< int     ,         ,         , integer  >
+< char    ,         ,         , ch       >
+< int     ,         ,         , dell     >
+< =       , 1       ,         , integer  >
+< <       , var1    , var2    , _Label_0 >
+< <       , var1    , var3    , _Label_2 >
+< =       , var1    ,         , dell     >
+< jmp     ,         ,         , _Label_3 >
+< lab     ,         ,         , _Label_2 >
+< =       , var3    ,         , dell     >
+< lab     ,         ,         , _Label_3 >
+< jmp     ,         ,         , _Label_1 >
+< lab     ,         ,         , _Label_0 >
+< <       , var2    , var3    , _Label_4 >
+< =       , var2    ,         , dell     >
+< jmp     ,         ,         , _Label_5 >
+< lab     ,         ,         , _Label_4 >
+< =       , var3    ,         , dell     >
+< lab     ,         ,         , _Label_5 >
+< lab     ,         ,         , _Label_1 >
+< ret     ,         ,         , dell     >
+< exit    ,         ,         , max      >
+< para    , int     ,         , base     >
+< para    , int     ,         , step     >
+< para    , int     ,         , n        >
+< func    , int     ,         , add1     >
+< lab     ,         ,         , _Label_7 >
+< <=      , n       , 0       , _Label_6 >
+< int     ,         ,         , _Var_0   >
+< +       , base    , step    , _Var_0   >
+< =       , _Var_0  ,         , base     >
+< int     ,         ,         , _Var_1   >
+< -       , n       , 1       , _Var_1   >
+< =       , _Var_1  ,         , n        >
+< jmp     ,         ,         , _Label_7 >
+< lab     ,         ,         , _Label_6 >
+< ret     ,         ,         , base     >
+< exit    ,         ,         , add1     >
+< func    ,         ,         , main     >
+< int     ,         ,         , cast1    >
+< int     ,         ,         , cast2    >
+< int     ,         ,         , cast3    >
+< int     ,         ,         , cast4    >
+< int     ,         ,         , cast5    >
+< int     ,         ,         , cast6    >
+< int     ,         ,         , rel      >
+< int     ,         ,         , choice   >
+< =       , const3  ,         , var3     >
+< =       , const4  ,         , var4     >
+< prtf    , "input there number",         ,          >
+< scf     ,         ,         , cast1    >
+< scf     ,         ,         , cast2    >
+< scf     ,         ,         , cast3    >
+< int     ,         ,         , _Var_2   >
+< callpara,         ,         , cast3    >
+< callpara,         ,         , cast2    >
+< callpara,         ,         , cast1    >
+< call    , max     ,         , _Var_2   >
+< =       , _Var_2  ,         , var1     >
+< prtf    , "the max number:", var1    ,          >
+< prtf    , "\n"    ,         ,          >
+< prtf    , "Input the base:",         ,          >
+< scf     ,         ,         , cast4    >
+< prtf    , "Input the step:",         ,          >
+< scf     ,         ,         , cast5    >
+< prtf    , "Input the number:",         ,          >
+< scf     ,         ,         , cast6    >
+< int     ,         ,         , _Var_3   >
+< callpara,         ,         , cast6    >
+< callpara,         ,         , cast5    >
+< callpara,         ,         , cast4    >
+< call    , add1    ,         , _Var_3   >
+< =       , _Var_3  ,         , rel      >
+< prtf    , "the result:",         ,          >
+< prtf    ,         , rel     ,          >
+< prtf    , "\nInput the choice: 1 2 3 , 0 for return \n",         ,          >
+< scf     ,         ,         , choice   >
+< lab     ,         ,         , _Label_9 >
+< ==      , choice  , 0       , _Label_8 >
+< !=      , 1       , choice  , _Label_10 >
+< prtf    , "good\n",         ,          >
+< lab     ,         ,         , _Label_10 >
+< !=      , 2       , choice  , _Label_11 >
+< prtf    , "better\n",         ,          >
+< lab     ,         ,         , _Label_11 >
+< !=      , 3       , choice  , _Label_12 >
+< prtf    , "best\n",         ,          >
+< lab     ,         ,         , _Label_12 >
+< scf     ,         ,         , choice   >
+< jmp     ,         ,         , _Label_9 >
+< lab     ,         ,         , _Label_8 >
+< exit    ,         ,         , main     >

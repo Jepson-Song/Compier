@@ -1,0 +1,33 @@
+int a;                  < int, , ,a >
+char a;				    < char, , ,a >
+int a[10];				< int, 10, , a >
+char a[10];				< char, 10, , a >
+const int a = 1;		< const, int, 1, a >
+const char a = 2;		< const, char, 2, a >
+int a();				< func, int, , a >
+char a();				< func, char, , a >
+void a();				< func, void, , a >
+fun(int a,)				< para, int, , a >
+fun(char a,)			< para, char, , a >
+a = b;					< =, b, , a >
+a[i] = b;				< []=, b, i, a >
+a = b[i];				< =[], b, i, a >
+(int|char) fun();		< call, , , fun >
+(void) fun();			< call, , , >
+fun(a);					< callpara, int|char, , a >
+if(a < b)				< blt, a, b, label >
+if(a <= b)				< ble, a, b, label >
+if(a > b)				< bgt, a, b, label >
+if(a >= b)				< bge, a, b, label >
+if(a == b)				< beq, a, b, label >
+if(a != b)				< bne, a, b, label >
+jmp	label		 		< j, , , label>
+set label				< lab, , , label >
+return ;				< ret, , , >
+return a;				< ret, , , a >
+scanf(a);				< scf, , , a >
+print("a",b);			< prf, a, b,  >
+a + b					< +, a, b, >
+a - b					< -, a, b, >
+a * b					< *, a, b, >
+a / b					< /, a, b, >
