@@ -392,3 +392,5 @@ void optimize_varReplace(int index) // 用寄存器替换变量
 void genAsm(string op)//生成汇编语言  
 void optimize_outAll()//输出分配后的结果  
 void optimize_run()//运行优化  
+
+
