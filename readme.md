@@ -14,49 +14,49 @@
 那么编译器读入的时候识别到的是这样子的：○1i ○2n ○3t ○4(空格) ○5a ○6; 共六个字符，但是它并不知道该怎么划分，所以你要制定一些规则来告诉它怎么去划分，比如你可以规定：当i n t (空格)四个字符出现的时候，这就是一个整形变量声明的标识符，当一个字符a单独出现的时候这就可能是一个变量名或者函数名等等。
 
 ## 词法设计
-#define INT_SYM 1 // int
-#define CHAR_SYM 2 // char
-#define FLOAT_SYM 3 // float
-#define DOUBLE_SYM 4 // double
-#define BOOL_SYM 5 // bool
-#define VOID_SYM 6 // void
-#define CONST_SYM 7 // const
-#define IF_SYM 8 // if
-#define ELSE_SYM 9 // else
-#define FOR_SYM 10 // for
-#define WHILE_SYM 11 // while
-#define DO_SYM 12 // do
-#define PRINTF_SYM 13 // print
-#define SCANF_SYM 14 // scanf
-#define RETURN_SYM 15 // return
-#define MAIN_SYM 16 // main
-#define IDENTIFIER_SYM 17 // indentifier
-#define ADD_SYM 18 // +
-#define SUBTRACT_SYM 19 // -
-#define MULTIPLY_SYM 20 // *
-#define DIVIDE_SYM 21 // /
-#define LESS_SYM 22 // <
-#define GREATER_SYM 23 // >
-#define LESSEQUAL_SYM 24 // <=
-#define GREATEREQUAL_SYM 25 // >=
-#define EQUAL_SYM 26 // ==
-#define NOTEQUAL_SYM 27 // !=
-#define ASSIGN_SYM 28 // =
-#define COMMA_SYM 29 // ,
-#define SEMICOLON_SYM 30 // ;
-#define COLON_SYM 31 // :
-#define SINGALQUOTATION_SYM 32 // '
-#define DOUBLEQUOTATION_SYM 33 // "
-#define LEFTSMALLBRACKET_SYM 34 // (
-#define RIGHTSMALLBRACKET_SYM 35 // )
-#define LEFTMIDDLEBRACKET_SYM 36 // [
-#define RIGHTMIDDLEBRACKET_SYM 37 // ]
-#define LEFTBIGBRACKET_SYM 38 // {
-#define RIGHTBIGBRACKET_SYM 39 // }
-#define NUMBER_SYM 40 // number
-#define STRING_SYM 41 // string
-#define CHARACTER_SYM 42 // character
-#define ERROR 0 // error
+#define INT_SYM 1 // int  
+#define CHAR_SYM 2 // char  
+#define FLOAT_SYM 3 // float  
+#define DOUBLE_SYM 4 // double  
+#define BOOL_SYM 5 // bool  
+#define VOID_SYM 6 // void  
+#define CONST_SYM 7 // const  
+#define IF_SYM 8 // if  
+#define ELSE_SYM 9 // else  
+#define FOR_SYM 10 // for  
+#define WHILE_SYM 11 // while  
+#define DO_SYM 12 // do  
+#define PRINTF_SYM 13 // print  
+#define SCANF_SYM 14 // scanf  
+#define RETURN_SYM 15 // return  
+#define MAIN_SYM 16 // main  
+#define IDENTIFIER_SYM 17 // indentifier  
+#define ADD_SYM 18 // +  
+#define SUBTRACT_SYM 19 // -  
+#define MULTIPLY_SYM 20 // *  
+#define DIVIDE_SYM 21 // /  
+#define LESS_SYM 22 // <  
+#define GREATER_SYM 23 // >  
+#define LESSEQUAL_SYM 24 // <=  
+#define GREATEREQUAL_SYM 25 // >=  
+#define EQUAL_SYM 26 // ==  
+#define NOTEQUAL_SYM 27 // !=  
+#define ASSIGN_SYM 28 // =  
+#define COMMA_SYM 29 // ,  
+#define SEMICOLON_SYM 30 // ;  
+#define COLON_SYM 31 // :  
+#define SINGALQUOTATION_SYM 32 // '  
+#define DOUBLEQUOTATION_SYM 33 // "  
+#define LEFTSMALLBRACKET_SYM 34 // (  
+#define RIGHTSMALLBRACKET_SYM 35 // )  
+#define LEFTMIDDLEBRACKET_SYM 36 // [  
+#define RIGHTMIDDLEBRACKET_SYM 37 // ]  
+#define LEFTBIGBRACKET_SYM 38 // {  
+#define RIGHTBIGBRACKET_SYM 39 // }  
+#define NUMBER_SYM 40 // number  
+#define STRING_SYM 41 // string  
+#define CHARACTER_SYM 42 // character  
+#define ERROR 0 // error  
 
 PS：词法设计就是给每一个划分好的词打上一个标签，方便之后语法分析时识别和使用。
 
@@ -325,6 +325,7 @@ J-type | op | address | ？
 -| - | - | -
 j | 000010 | address |  PC <- (PC+4)[31..28],address,0,0   ；address=10000/4
 jal | 000011 | address |  $31<-PC+4；PC <- (PC+4)[31..28],address,0,0   ；address=10000/
+
 ## 函数说明
 void asm_init()//汇编语言生成初始化  
 void saveLocVar()//保存局部变量  
