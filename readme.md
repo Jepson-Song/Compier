@@ -287,7 +287,7 @@ PS：不同人开发的编译器fp，局部变量，参数，ra等入栈的顺�
 到此为止，只要你编译器转化出的汇编代码能成功运行并且结果还正确，那么编译器就算开发出来了。当然了，这种程度的编译器在功能、性能、可靠性等方面都还有很大的进步空间。  
 ## mips指令集
 R-type | op | rs | rt | rd | shamt | func | ？ 
-- | - | - | - | - | - | - | -
+-| - | - | - | - | - | - | -
 add | 000000 | rs | rt | rd | 00000 | 100000 |  rd <- rs + rt   ；其中rs＝$2，rt=$3, rd=$1
 addu | 000000 | rs | rt | rd | 00000 | 100001 |  rd <- rs + rt   ；其中rs＝$2，rt=$3, rd=$1,无符号数
 sub | 000000 | rs | rt | rd | 00000 | 100010 |  rd <- rs - rt   ；其中rs＝$2，rt=$3, rd=$1
@@ -307,7 +307,7 @@ srav | 000000 | rs | rt | rd | 00000 | 000111 |  rd <- rt >> rs  ；(arithmetic)
 jr | 000000 | rs | 00000 | 00000 | 00000 | 001000 |  PC <- rs
 
 I-type | op | rs | rt | immediate | ？
-- | - | - | - | - | -
+-| - | - | - | - | -
 addi | 001000 | rs | rt | immediate |  rt <- rs + (sign-extend)immediate ；其中rt=$1,rs=$2
 addiu | 001001 | rs | rt | immediate |  rt <- rs + (zero-extend)immediate ；其中rt=$1,rs=$2
 andi | 001100 | rs | rt | immediate |  rt <- rs & (zero-extend)immediate ；其中rt=$1,rs=$2
@@ -322,7 +322,7 @@ slti | 001010 | rs | rt | immediate |  if (rs <(sign-extend)immediate) rt=1 else
 sltiu | 001011 | rs | rt | immediate |  if (rs <(zero-extend)immediate) rt=1 else rt=0 ；  其中rs＝$2，rt=$1
 
 J-type | op | address | ？ 
-- | - | - | -
+-| - | - | -
 j | 000010 | address |  PC <- (PC+4)[31..28],address,0,0   ；address=10000/4
 jal | 000011 | address |  $31<-PC+4；PC <- (PC+4)[31..28],address,0,0   ；address=10000/
 ## 函数说明
